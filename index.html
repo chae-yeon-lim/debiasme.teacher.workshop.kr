@@ -19,31 +19,31 @@ html{font-size:16px;}
 body{font-family:'Noto Sans KR','Barlow',system-ui,sans-serif;background:var(--dark);color:#e8edf2;min-height:100vh;overflow-x:hidden;}
 
 /* ══ LANDING ══ */
-#screen-0{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100vh;padding:48px;text-align:center;position:relative;background:linear-gradient(160deg,var(--dark) 0%,#1a3048 50%,#1e2d3d 100%);}
+#screen-0{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100vh;padding:48px;text-align:center;position:relative;background:#ffffff;}
 #screen-0.gone{display:none !important;}
-.intro-top{font-family:'Josefin Slab','Barlow Condensed',system-ui,sans-serif;font-size:13px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--sky);margin-bottom:28px;}
-.intro-title{font-family:'Barlow Condensed',system-ui,sans-serif;font-size:52px;font-weight:800;color:white;line-height:1.1;margin-bottom:14px;}
-.intro-title em{color:var(--mid);font-style:normal;}
-.intro-desc{font-size:16px;color:rgba(255,255,255,0.5);line-height:1.75;margin-bottom:8px;max-width:520px;}
+.intro-top{font-family:'Josefin Slab','Barlow Condensed',system-ui,sans-serif;font-size:13px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--blue);margin-bottom:28px;}
+.intro-title{font-family:'Barlow Condensed',system-ui,sans-serif;font-size:52px;font-weight:800;color:var(--navy);line-height:1.1;margin-bottom:14px;}
+.intro-title em{color:var(--blue);font-style:normal;}
+.intro-desc{font-size:16px;color:var(--txt2);line-height:1.75;margin-bottom:8px;max-width:520px;}
 .group-setup{display:flex;align-items:center;gap:14px;margin-bottom:24px;}
-.group-input{background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:8px;padding:13px 18px;color:white;font-family:inherit;font-size:15px;width:220px;transition:border-color 0.2s;}
-.group-input:focus{outline:none;border-color:var(--mid);}
-.group-input::placeholder{color:rgba(255,255,255,0.18);}
+.group-input{background:rgba(0,0,0,0.03);border:1px solid var(--light);border-radius:8px;padding:13px 18px;color:var(--txt);font-family:inherit;font-size:15px;width:220px;transition:border-color 0.2s;}
+.group-input:focus{outline:none;border-color:var(--blue);}
+.group-input::placeholder{color:var(--txt3);}
 .btn-start{background:var(--blue);color:white;border:none;padding:13px 40px;border-radius:8px;font-size:16px;font-weight:700;cursor:pointer;font-family:inherit;transition:all 0.2s;}
 .btn-start:hover{background:var(--accent);transform:translateY(-1px);box-shadow:0 4px 16px rgba(62,124,177,0.4);}
-.intro-footer{position:absolute;bottom:24px;font-size:11px;color:rgba(255,255,255,0.12);letter-spacing:0.5px;}
+.intro-footer{position:absolute;bottom:24px;font-size:11px;color:var(--txt3);letter-spacing:0.5px;}
 
 /* ══ PHASE BAR ══ */
-.phase-bar{display:flex;align-items:center;justify-content:space-between;padding:0 28px;background:rgba(30,45,61,0.95);border-bottom:1px solid rgba(255,255,255,0.06);height:48px;position:sticky;top:0;z-index:50;backdrop-filter:blur(8px);}
+.phase-bar{display:flex;align-items:center;justify-content:space-between;padding:0 28px;background:#ffffff;border-bottom:1px solid var(--light);height:48px;position:sticky;top:0;z-index:50;backdrop-filter:blur(8px);}
 .phase-bar.hidden{display:none;}
 .pb-left{display:flex;align-items:center;gap:14px;}
-.phase-logo{font-family:'Josefin Slab',system-ui,sans-serif;font-size:15px;font-weight:700;color:var(--sky);cursor:default;}
+.phase-logo{font-family:'Josefin Slab',system-ui,sans-serif;font-size:15px;font-weight:700;color:var(--navy);cursor:default;}
 .phase-dots{display:flex;gap:6px;}
-.pdot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.1);transition:all 0.3s;}
-.pdot.done{background:var(--mid);opacity:0.5;}.pdot.active{background:var(--mid);transform:scale(1.3);}
-.phase-label{font-size:11px;font-weight:600;letter-spacing:0.8px;color:rgba(255,255,255,0.3);}
-.phase-grp{font-size:11px;color:rgba(255,255,255,0.2);}
-.phase-grp strong{color:var(--sky);opacity:0.8;}
+.pdot{width:8px;height:8px;border-radius:50%;background:var(--light);transition:all 0.3s;}
+.pdot.done{background:var(--mid);opacity:0.5;}.pdot.active{background:var(--blue);transform:scale(1.3);}
+.phase-label{font-size:11px;font-weight:600;letter-spacing:0.8px;color:var(--txt2);}
+.phase-grp{font-size:11px;color:var(--txt3);}
+.phase-grp strong{color:var(--blue);opacity:0.8;}
 
 /* ══ SCREENS ══ */
 .screen{display:none;}
@@ -193,7 +193,7 @@ body{font-family:'Noto Sans KR','Barlow',system-ui,sans-serif;background:var(--d
 <!-- LANDING -->
 <div id="screen-0" class="screen active">
   <div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:48px;text-align:center;">
-    <div class="intro-top">DeBiasMe Workshop</div>
+    <img src="debiasme-logo.png" alt="DeBiasMe Workshop" style="height:60px;margin-bottom:28px;">
     <div class="intro-title"><em>AI 편향</em>을 체험하고<br>기록해봅시다</div>
     <div class="intro-desc">AI 시뮬레이션을 통해 AI 수명 주기 속 편향을</div>
     <div class="intro-desc" style="margin-bottom:36px;">직접 경험하고, 인식, 대응합니다.</div>
@@ -207,7 +207,7 @@ body{font-family:'Noto Sans KR','Barlow',system-ui,sans-serif;background:var(--d
 
 <!-- PHASE BAR -->
 <div class="phase-bar hidden" id="phase-bar">
-  <div class="pb-left"><div class="phase-logo">DeBiasMe</div><div class="phase-dots" id="phase-dots"></div><div class="phase-label" id="phase-label"></div></div>
+  <div class="pb-left"><img src="debiasme-logo.png" alt="DeBiasMe" style="height:24px;"><div class="phase-dots" id="phase-dots"></div><div class="phase-label" id="phase-label"></div></div>
   <div class="phase-grp" id="phase-grp"></div>
 </div>
 
